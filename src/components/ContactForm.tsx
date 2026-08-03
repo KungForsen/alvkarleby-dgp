@@ -48,7 +48,7 @@ export default function ContactForm() {
       console.error("Web3Forms – nätverksfel:", err);
       setStatus("error");
       setErrorMessage(
-        "Kunde inte nå formulärtjänsten. Kontrollera internetuppkopplingen."
+        "Kunde inte bekräfta att meddelandet skickades — det kan bero på en annonsblockerare eller ett webbläsartillägg. Kolla gärna din mejl innan du skickar igen, meddelandet kan redan ha kommit fram."
       );
     }
   }
