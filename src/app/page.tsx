@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FallDivider from "@/components/FallDivider";
 import SponsorStrip from "@/components/SponsorStrip";
 import Info from "@/components/Info";
+import FAQ from "@/components/FAQ";
 import Calendar from "@/components/Calendar";
 import SponsorCTA from "@/components/SponsorCTA";
 import Contact from "@/components/Contact";
@@ -17,6 +18,7 @@ export default function Home() {
         <FallDivider />
         <SponsorStrip />
         <Info />
+        <FAQ />
         <Calendar />
         <FallDivider />
         <SponsorCTA />
