@@ -17,10 +17,15 @@ export default function ContactForm() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    // Sparas HÄR, innan något await – event.currentTarget blir null så
+    // fort webbläsarens händelsehantering är klar, vilket sker långt
+    // innan fetch-anropet hinner svara.
+    const form = event.currentTarget;
+
     setStatus("sending");
     setErrorMessage(null);
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "Nytt meddelande från alvkarlebydgp.se");
 
@@ -37,7 +42,7 @@ export default function ContactForm() {
 
       if (result.success) {
         setStatus("sent");
-        event.currentTarget.reset();
+        form.reset();
       } else {
         setStatus("error");
         setErrorMessage(
@@ -48,7 +53,7 @@ export default function ContactForm() {
       console.error("Web3Forms – nätverksfel:", err);
       setStatus("error");
       setErrorMessage(
-        "Kunde inte bekräfta att meddelandet skickades — det kan bero på en annonsblockerare eller ett webbläsartillägg. Kolla gärna din mejl innan du skickar igen, meddelandet kan redan ha kommit fram."
+        "Något gick fel. Prova igen, eller mejla oss direkt."
       );
     }
   }
