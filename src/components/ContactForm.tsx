@@ -1,9 +1,8 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useState, type FormEvent } from "react";
 
-type Status = "idle" | "sending" | "sent" | "error" | "missing-captcha";
+type Status = "idle" | "sending" | "sent" | "error";
 
 // Byt ut mot er egna access key från https://web3forms.com (gratis, ingen
 // backend behövs). VIKTIGT: mejlet skickas till den e-postadress som är
@@ -11,23 +10,12 @@ type Status = "idle" | "sending" | "sent" | "error" | "missing-captcha";
 // kontot med kontakt@alvkarlebydgp.se, inte med en privat mejladress.
 const WEB3FORMS_ACCESS_KEY = "6f9ec556-9060-4746-9637-2c9c35e725c4";
 
-// Web3Forms gratisplanens delade hCaptcha-sitekey (samma för alla
-// gratiskonton – byt bara om ni uppgraderar till en betalplan).
-const HCAPTCHA_SITEKEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
-
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const captchaRef = useRef<HCaptcha>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    if (!captchaToken) {
-      setStatus("missing-captcha");
-      return;
-    }
 
     setStatus("sending");
     setErrorMessage(null);
@@ -35,11 +23,6 @@ export default function ContactForm() {
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "Nytt meddelande från alvkarlebydgp.se");
-    // OBS: h-captcha-response skickas INTE med här manuellt. Widgeten
-    // lägger själv in ett dolt fält med det namnet i formuläret, och
-    // FormData(form) plockar upp det automatiskt. Lägger vi till det
-    // igen här får Web3Forms två värden för samma fält och avvisar
-    // captchan ("Could not validate hCaptcha").
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -67,9 +50,6 @@ export default function ContactForm() {
       setErrorMessage(
         "Kunde inte nå formulärtjänsten. Kontrollera internetuppkopplingen."
       );
-    } finally {
-      captchaRef.current?.resetCaptcha();
-      setCaptchaToken(null);
     }
   }
 
@@ -105,19 +85,19 @@ export default function ContactForm() {
         className="resize-none rounded-md border border-cream/15 bg-forest-light/40 px-4 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
       />
 
-      <div className="mt-1">
-        <HCaptcha
-          ref={captchaRef}
-          sitekey={HCAPTCHA_SITEKEY}
-          reCaptchaCompat={false}
-          theme="dark"
-          onVerify={(token) => {
-            setCaptchaToken(token);
-            if (status === "missing-captcha") setStatus("idle");
-          }}
-          onExpire={() => setCaptchaToken(null)}
-        />
-      </div>
+      {/* Honeypot – osynligt fält för besökare, men bottar fyller ofta i
+          alla fält de hittar. Web3Forms avvisar automatiskt inskick där
+          det här fältet är ifyllt. Kräver ingen interaktion från
+          riktiga besökare. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
 
       <button
         type="submit"
@@ -127,9 +107,6 @@ export default function ContactForm() {
         {status === "sending" ? "Skickar…" : "Skicka"}
       </button>
 
-      {status === "missing-captcha" && (
-        <p className="text-sm text-clay">Bekräfta captchan innan du skickar.</p>
-      )}
       {status === "error" && (
         <p className="text-sm text-clay">
           {errorMessage ?? "Något gick fel. Prova igen, eller mejla oss direkt."}
