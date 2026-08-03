@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#information", label: "Information" },
-  { href: "#kalender", label: "Kalender" },
-  { href: "#sponsor", label: "Sponsor" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/#information", label: "Information" },
+  { href: "/#kalender", label: "Kalender" },
+  { href: "/#sponsor", label: "Sponsor" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-forest/95 backdrop-blur supports-[backdrop-filter]:bg-forest/90">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 sm:px-8">
         <a
-          href="#top"
+          href="/"
           onClick={() => setOpen(false)}
           className="flex items-center gap-3"
         >
@@ -102,6 +102,13 @@ export default function Header() {
             open ? "translate-y-0" : "-translate-y-2"
           }`}
         >
+          <a
+            href="/"
+            onClick={() => setOpen(false)}
+            className="border-b border-cream/10 pb-4 text-sm font-medium text-cream transition hover:text-gold"
+          >
+            Startsida
+          </a>
           {links.map((link) => (
             <a
               key={link.href}

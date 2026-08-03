@@ -35,7 +35,11 @@ export default function ContactForm() {
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "Nytt meddelande från alvkarlebydgp.se");
-    formData.append("h-captcha-response", captchaToken);
+    // OBS: h-captcha-response skickas INTE med här manuellt. Widgeten
+    // lägger själv in ett dolt fält med det namnet i formuläret, och
+    // FormData(form) plockar upp det automatiskt. Lägger vi till det
+    // igen här får Web3Forms två värden för samma fält och avvisar
+    // captchan ("Could not validate hCaptcha").
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
