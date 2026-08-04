@@ -64,13 +64,14 @@ export default function FAQ() {
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-out ${
-                    isOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
-                  }`}
+                  className="grid transition-[grid-template-rows] duration-300 ease-out"
+                  style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
-                  <p className="pb-5 text-[15px] leading-relaxed text-cream/70">
-                    {item.a}
-                  </p>
+                  <div className="overflow-hidden">
+                    <p className="pb-5 text-[15px] leading-relaxed text-cream/70">
+                      {item.a}
+                    </p>
+                  </div>
                 </div>
               </div>
             );
