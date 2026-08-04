@@ -80,6 +80,39 @@ export default function Integritetspolicy() {
 
             <section>
               <h2 className="font-display text-lg font-medium uppercase tracking-wide text-forest">
+                Kakor (cookies)
+              </h2>
+              <p className="mt-2">
+                En kaka är en liten textfil som sparas på din enhet när du
+                besöker en webbplats. Vissa kakor tas bort när du stänger
+                webbläsaren, andra ligger kvar längre. Du kan alltid ta bort
+                eller blockera kakor via inställningarna i din webbläsare.
+              </p>
+              <p className="mt-4">
+                Vår webbplats i sig sätter inga egna kakor. Två inbäddade
+                tredjepartstjänster gör det dock, och sätter kakor först när
+                du godkänner det i bannern som visas vid ditt första besök:
+              </p>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                <li>
+                  <strong className="text-forest">Google Maps</strong> — för
+                  att visa kartan till banan i kontaktsektionen.
+                </li>
+                <li>
+                  <strong className="text-forest">Elfsight</strong> — för att
+                  visa kalendern med kommande händelser.
+                </li>
+              </ul>
+              <p className="mt-4">
+                Vi använder inga kakor för marknadsföring eller
+                reklamriktning, och det finns ingen inloggning på
+                webbplatsen. Besöksstatistiken vi använder (Vercel Analytics)
+                är kakfri och identifierar inte enskilda besökare.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="font-display text-lg font-medium uppercase tracking-wide text-forest">
                 Kalender
               </h2>
               <p className="mt-2">
@@ -122,8 +155,9 @@ export default function Integritetspolicy() {
                 Typsnitt
               </h2>
               <p className="mt-2">
-                Webbplatsens typsnitt laddas från Google Fonts. Vid sidladdning
-                kan din IP-adress därför skickas till Google.
+                Webbplatsens typsnitt hämtas och lagras på våra egna servrar
+                vid publicering. Ingen begäran skickas till Google när du
+                besöker sidan.
               </p>
             </section>
 

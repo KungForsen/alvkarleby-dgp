@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Oswald, Inter, Space_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { CookieConsentProvider } from "@/components/CookieConsentProvider";
+import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 
 const display = Oswald({
@@ -55,7 +57,10 @@ export default function RootLayout({
       <body
         className={`${display.variable} ${body.variable} ${mono.variable} font-body`}
       >
-        {children}
+        <CookieConsentProvider>
+          {children}
+          <CookieBanner />
+        </CookieConsentProvider>
         <Analytics />
       </body>
     </html>
