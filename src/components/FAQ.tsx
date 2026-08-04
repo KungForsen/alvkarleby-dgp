@@ -6,27 +6,27 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Kostar det att spela?",
-    a: "Nej, banan är gratis att spela. Det finns en frivillig kostnad/donering om du vill stötta klubben.",
+    a: "Nej, banan är gratis att spela på. Om du vill stötta klubben uppskattar vi gärna en frivillig donation.",
   },
   {
     q: "Får hundar följa med?",
-    a: "Ja, kopplade hundar är välkomna. Kom ihåg att plocka upp efter dem.",
+    a: "Ja, kopplade hundar är välkomna. Tänk på att plocka upp efter din hund och visa hänsyn till andra besökare.",
   },
   {
     q: "Finns det parkering?",
-    a: "Ja, parkering finns i anslutning till banan.",
+    a: "Ja, det finns parkering i direkt anslutning till banan.",
   },
   {
     q: "Finns det regler jag bör tänka på?",
-    a: "Ja. Visa hänsyn till andra spelare, gående och naturen. Kasta aldrig om någon befinner sig inom räckhåll, och låt snabbare grupper spela igenom om det är möjligt.",
+    a: "Ja. Visa hänsyn till andra spelare, gående och naturen. Kasta aldrig om någon befinner sig inom räckhåll, och släpp gärna igenom snabbare grupper när det är möjligt.",
   },
   {
-    q: "Jag har hittat/tappat bort en disc, vad gör jag?",
-    a: "Hittad disc lämnas in i brevlådan vid informationstavlan. Vid en borttappad disc som återfinns skickar vi ut ett SMS — den kan sedan hämtas i samband med veckogolf eller enligt överenskommelse med den som hör av sig.",
+    q: "Jag har hittat eller tappat bort en disc - vad gör jag?",
+    a: "Hittade diskar lämnas i brevlådan vid informationstavlan. Om en märkt disc återfinns skickar vi ett SMS till ägaren. Discen kan därefter hämtas i samband med veckogolfen eller enligt överenskommelse.",
   },
   {
-    q: "Får jag spela när det är tävling?",
-    a: "Vid tävlingar eller organiserade aktiviteter kan banan vara helt eller delvis avstängd. Se kalendern eller klubbens sociala medier för aktuell information.",
+    q: "Får jag spela när det är tävling eller andra aktiviteter?",
+    a: "Ja, men vid tävlingar eller organiserade aktiviteter kan hela eller delar av banan vara avstängda. Kontrollera kalendern eller klubbens sociala medier för aktuell information innan du besöker banan.",
   },
 ];
 
