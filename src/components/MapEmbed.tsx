@@ -7,8 +7,8 @@ export default function MapEmbed() {
 
   if (consent !== "accepted") {
     return (
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-forest-light/40 p-6 text-center">
-        <p className="text-sm text-cream/70">
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-forest/5 p-6 text-center">
+        <p className="text-sm text-ink/70">
           Kartan laddas via Google Maps, som sätter kakor.
         </p>
         <button

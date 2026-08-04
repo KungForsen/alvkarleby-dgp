@@ -34,14 +34,14 @@ const perks: {
 
 export default function SponsorCTA() {
   return (
-    <section id="sponsor" className="bg-cream px-5 py-20 sm:px-8">
+    <section id="sponsor" className="bg-forest px-5 py-20 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <p className="eyebrow mb-3 text-teal">Sponsorskap</p>
-          <h2 className="font-display text-3xl font-medium uppercase tracking-wide text-forest sm:text-4xl">
+          <p className="eyebrow mb-3 text-teal-light">Sponsorskap</p>
+          <h2 className="font-display text-3xl font-medium uppercase tracking-wide text-cream sm:text-4xl">
             Bli en del av Älvkarleby Discgolfpark
           </h2>
-          <p className="mt-5 text-[15px] leading-relaxed text-ink/70">
+          <p className="mt-5 text-[15px] leading-relaxed text-cream/70">
             Genom ett sponsorskap stöttar du utvecklingen av discgolfen i
             Älvkarleby. Alla partners får synlighet anpassad efter stödnivå,
             samtidigt som varje bidrag hjälper oss att fortsätta utveckla
@@ -55,9 +55,9 @@ export default function SponsorCTA() {
           </a>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-lg bg-cream/10 sm:grid-cols-2 lg:grid-cols-4">
           {perks.map((perk) => (
-            <div key={perk.title} className="rounded-lg bg-forest-deep p-6">
+            <div key={perk.title} className="bg-forest-deep p-6">
               <perk.icon size={20} className="text-gold" strokeWidth={1.75} aria-hidden="true" />
               <span className="mt-3 block font-mono text-xs text-gold">
                 {perk.code}

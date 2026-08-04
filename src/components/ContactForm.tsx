@@ -60,7 +60,7 @@ export default function ContactForm() {
 
   if (status === "sent") {
     return (
-      <p className="rounded-md border border-teal-light/30 bg-forest-light/40 px-5 py-4 text-sm text-cream">
+      <p className="rounded-md border border-teal/20 bg-white px-5 py-4 text-sm text-ink">
         Tack för ditt meddelande! Vi återkommer så snart vi kan.
       </p>
     );
@@ -73,21 +73,21 @@ export default function ContactForm() {
         name="name"
         required
         placeholder="Namn"
-        className="rounded-md border border-cream/15 bg-forest-light/40 px-4 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
+        className="rounded-md border border-forest/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-stone focus:border-gold focus:outline-none"
       />
       <input
         type="email"
         name="email"
         required
         placeholder="E-post"
-        className="rounded-md border border-cream/15 bg-forest-light/40 px-4 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
+        className="rounded-md border border-forest/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-stone focus:border-gold focus:outline-none"
       />
       <textarea
         name="message"
         required
         rows={4}
         placeholder="Meddelande"
-        className="resize-none rounded-md border border-cream/15 bg-forest-light/40 px-4 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none"
+        className="resize-none rounded-md border border-forest/15 bg-white px-4 py-3 text-sm text-ink placeholder:text-stone focus:border-gold focus:outline-none"
       />
 
       {/* Honeypot – osynligt fält för besökare, men bottar fyller ofta i

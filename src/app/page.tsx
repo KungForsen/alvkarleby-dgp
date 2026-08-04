@@ -20,6 +20,7 @@ export default function Home() {
         <Info />
         <FAQ />
         <Calendar />
+        <FallDivider />
         <SponsorCTA />
         <FallDivider />
         <Contact />
