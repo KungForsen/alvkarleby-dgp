@@ -20,9 +20,15 @@ export default function Hero() {
           href="https://www.svenskalag.se/alvkarlebyik/formular/bli-medlem-stodmedlem-aik-discgolf/31158"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-gold px-6 py-3 text-sm font-medium text-forest-deep transition hover:bg-gold-dark"
+          className="rounded-md border border-cream/25 px-6 py-3 text-sm font-medium text-cream transition hover:border-gold hover:text-gold"
         >
           Bli medlem
+        </a>
+        <a
+          href="/spela-discgolf"
+          className="rounded-md bg-gold px-6 py-3 text-sm font-medium text-forest-deep transition hover:bg-gold-dark"
+        >
+          Spela Discgolf
         </a>
         <a
           href="#sponsor"
