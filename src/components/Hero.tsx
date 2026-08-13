@@ -25,18 +25,19 @@ export default function Hero() {
           Bli medlem
         </a>
         <a
-          href="/spela-discgolf"
-          className="rounded-md bg-gold px-6 py-3 text-sm font-medium text-forest-deep transition hover:bg-gold-dark"
-        >
-          Spela Discgolf
-        </a>
-        <a
           href="#sponsor"
-          className="rounded-md border border-cream/25 px-6 py-3 text-sm font-medium text-cream transition hover:border-gold hover:text-gold"
+          className="rounded-md bg-gold px-6 py-3 text-sm font-medium text-forest-deep transition hover:bg-gold-dark"
         >
           Bli sponsor
         </a>
       </div>
+
+      <a
+        href="/spela-discgolf"
+        className="eyebrow mt-6 inline-block text-teal-light transition hover:text-gold"
+      >
+        Ny på discgolf? Lär dig grunderna här →
+      </a>
     </section>
   );
 }

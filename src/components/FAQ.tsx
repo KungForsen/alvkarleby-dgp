@@ -5,6 +5,22 @@ import { ChevronDown } from "lucide-react";
 
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
+    q: "Kom igång med discgolf",
+    a: (
+      <>
+        Här hittar du en enkel introduktion till spelet, poäng, vanliga
+        regler och annat som kan vara bra att känna till.{" "}
+        <a
+          href="/spela-discgolf"
+          className="text-gold underline underline-offset-2 hover:text-gold-dark"
+        >
+          Läs mer här
+        </a>
+        .
+      </>
+    ),
+  },
+  {
     q: "Kostar det att spela?",
     a: "Nej, banan är gratis att spela på. Om du vill stötta klubben uppskattar vi gärna en frivillig donation.",
   },
@@ -15,22 +31,6 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: "Finns det parkering?",
     a: "Ja, det finns parkering i direkt anslutning till banan.",
-  },
-  {
-    q: "Hur spelar man discgolf?",
-    a: (
-      <>
-        Ny på discgolf? Läs vår{" "}
-        <a
-          href="/spela-discgolf"
-          className="text-gold underline underline-offset-2 hover:text-gold-dark"
-        >
-          guide för nybörjare
-        </a>{" "}
-        där vi går igenom hur spelet fungerar, poäng, vanliga regler och vad
-        du behöver veta innan du börjar.
-      </>
-    ),
   },
   {
     q: "Jag har hittat eller tappat bort en disc - vad gör jag?",

@@ -14,21 +14,23 @@ export default function SpelaDiscgolf() {
       <Header />
       <main>
         {/* Intro */}
-        <section className="bg-forest px-5 py-20 text-center sm:px-8">
-          <p className="eyebrow mb-3 text-teal-light">Nybörjarguide</p>
+        <section className="relative overflow-hidden bg-forest bg-contour bg-cover bg-center px-5 py-20 text-center sm:px-8">
+          <p className="eyebrow mb-3 text-teal-light">Kom igång med discgolf</p>
           <h1 className="mx-auto max-w-2xl font-display text-4xl font-medium uppercase tracking-wide text-cream sm:text-5xl">
-            Spela discgolf – så enkelt är det
+            Så spelar du discgolf
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-[15px] leading-relaxed text-cream/70">
-            Discgolf fungerar ungefär som vanlig golf – men istället för
-            klubbor och en boll använder du en disc, och istället för ett
-            hål spelar du mot en korg. Målet är enkelt: få discen i korgen
-            på så få kast som möjligt.
+            Discgolf är enkelt att komma igång med och fungerar på många
+            sätt som vanlig golf. Skillnaden är att du använder en disc
+            istället för klubbor och boll, och spelar mot en korg istället
+            för ett hål.
           </p>
           <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-cream/70">
-            Du börjar vid hålets tee, kastar mot korgen och fortsätter sedan
-            från där discen landade. När discen ligger i korgen är hålet
-            klart.
+            Målet är enkelt: få discen i korgen på så få kast som möjligt.
+          </p>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-cream/70">
+            Du börjar vid hålets tee, kastar mot korgen och fortsätter från
+            där discen landade. När discen ligger i korgen är hålet klart.
           </p>
           <p className="mt-6 font-mono text-sm tracking-wide text-gold">
             Tee → kasta → hitta discen → kasta igen → korg
