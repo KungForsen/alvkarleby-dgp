@@ -35,7 +35,7 @@ export default function Info() {
 
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Image
-            src="/images/karta.jpg"
+            src="/images/karta.png"
             alt="Karta över Älvkarleby discgolfbana"
             fill
             className="object-cover"

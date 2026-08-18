@@ -3,10 +3,11 @@ import Image from "next/image";
 const sponsors = [
   { name: "Bolist Älvkarleby", file: "bolist.png" },
   { name: "Br. Larssons Snickeri AB", file: "brlarsson.png" },
+  { name: "Coop Älvkarleby", file: "coop.png" },
   { name: "Dalälvens VVS AB", file: "dalalvensvvs.png" },
   { name: "Gröna Källan", file: "gronakallan.png" },
   { name: "La Fornetto", file: "lafornetto.png" },
-  { name: "Moto Wrap", file: "motowrap.png" },
+  { name: "Oskars Service", file: "oskarsservice.png" },
   { name: "Valbo Trä", file: "valbotra.png" },
   { name: "Älvkarlebyhus", file: "abyhus.png" },
 ];
