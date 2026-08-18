@@ -12,9 +12,10 @@ const sponsors = [
   { name: "Älvkarlebyhus", file: "abyhus.png" },
 ];
 
-// Listan dubbleras så att spåret kan loopa sömlöst: när det första settet
-// har skrollat ut i -50% är det andra settet exakt där det första började.
-const track = [...sponsors, ...sponsors];
+// Listan upprepas 4 gånger så spåret alltid har gott om innehåll kvar
+// innan det hinner loopa - även på mycket breda skärmar. Vid 25% har
+// tre hela uppsättningar alltid hunnit "väntat" bakom synfältet.
+const track = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
 
 export default function SponsorStrip() {
   return (
